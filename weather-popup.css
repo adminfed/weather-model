@@ -1,0 +1,100 @@
+#dnWeatherPopup {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+.dn-weather-popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  animation: dnWeatherPopupIn 0.25s ease;
+}
+
+.dn-weather-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+
+  width: 38px;
+  height: 38px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.08);
+  color: #333;
+
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dn-weather-popup-close:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dn-weather-popup-content {
+  width: 100%;
+  padding: 20px;
+}
+
+.dn-weather-popup-content > #dnWeather {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+@keyframes dnWeatherPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #dnWeatherPopup {
+    padding: 10px;
+  }
+
+  .dn-weather-popup-box {
+    max-width: 100%;
+    max-height: 94vh;
+    border-radius: 18px;
+  }
+
+  .dn-weather-popup-content {
+    padding: 14px;
+  }
+
+  .dn-weather-popup-close {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 23px;
+    line-height: 36px;
+  }
+}
