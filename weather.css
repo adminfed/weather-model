@@ -1,0 +1,477 @@
+/* ============================
+   DA NANG 7-DAY WEATHER
+   STABLE TRANSLATION LAYOUT
+   ============================ */
+
+.dn-weather {
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 22px;
+  box-sizing: border-box;
+
+  background: var(--bodyB, #fff);
+  color: var(--fontC, #333);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+
+  font-family: inherit;
+
+  /* Prevent translated content from changing the card */
+  overflow: hidden;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+
+.dn-weather-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  min-width: 0;
+}
+
+.dn-weather-city {
+  min-width: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dn-weather-current-status {
+  margin-top: 5px;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  opacity: 0.65;
+
+  /* Keep translated text inside its area */
+  max-width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dn-weather-icon {
+  flex: 0 0 42px;
+
+  width: 42px;
+  min-width: 42px;
+
+  font-size: 42px;
+  line-height: 1;
+
+  text-align: center;
+}
+
+/* ============================
+   CURRENT WEATHER
+   ============================ */
+
+.dn-weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-top: 8px;
+
+  min-width: 0;
+}
+
+.dn-weather-temp {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  white-space: nowrap;
+}
+
+.dn-weather-unit {
+  flex: 0 0 auto;
+
+  margin-top: 3px;
+
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+.dn-weather-temp sup {
+  position: relative;
+  top: -20px;
+
+  margin-left: 3px;
+
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* ============================
+   WEATHER DETAILS
+   ============================ */
+
+.dn-weather-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+
+  gap: 6px 14px;
+
+  min-width: 0;
+
+  font-size: 12px;
+  line-height: 1.3;
+
+  opacity: 0.75;
+
+  white-space: nowrap;
+}
+
+.dn-weather-details > * {
+  min-width: 0;
+}
+
+/* ============================
+   FEELS LIKE
+   ============================ */
+
+.dn-weather-feels {
+  margin-top: 13px;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  opacity: 0.65;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================
+   DIVIDER
+   ============================ */
+
+.dn-weather-divider {
+  height: 1px;
+
+  margin: 20px 0 15px;
+
+  background: rgba(0, 0, 0, 0.07);
+}
+
+/* ============================
+   FORECAST
+   ============================ */
+
+.dn-weather-forecast {
+  display: grid;
+
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+
+  gap: 8px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.dn-weather-day {
+  width: 100%;
+  min-width: 0;
+
+  padding: 12px 5px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-radius: 12px;
+  background: rgba(127, 127, 127, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+  overflow: hidden;
+}
+
+.dn-weather-day:hover {
+  transform: translateY(-2px);
+}
+
+.dn-weather-day-name {
+  width: 100%;
+  min-width: 0;
+
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dn-weather-day-date {
+  margin-top: 3px;
+
+  font-size: 10px;
+  line-height: 1.3;
+
+  opacity: 0.5;
+
+  white-space: nowrap;
+}
+
+.dn-weather-day-icon {
+  width: 100%;
+
+  margin: 9px 0;
+
+  font-size: 26px;
+  line-height: 1;
+
+  text-align: center;
+}
+
+.dn-weather-day-temp {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.dn-weather-day-temp span {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.dn-weather-day-rain {
+  margin-top: 6px;
+
+  font-size: 10px;
+  line-height: 1.3;
+
+  opacity: 0.65;
+
+  white-space: nowrap;
+}
+
+/* ============================
+   TODAY
+   ============================ */
+
+.dn-weather-day.today {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+/* ============================
+   UPDATE
+   ============================ */
+
+.dn-weather-update {
+  margin-top: 17px;
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  opacity: 0.5;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================
+   MOBILE
+   ============================ */
+
+@media (max-width: 600px) {
+  .dn-weather {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .dn-weather-main {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .dn-weather-temp {
+    font-size: 48px;
+  }
+
+  .dn-weather-icon {
+    flex-basis: 36px;
+
+    width: 36px;
+    min-width: 36px;
+
+    font-size: 36px;
+  }
+
+  .dn-weather-details {
+    grid-template-columns: repeat(3, auto);
+
+    gap: 6px 12px;
+
+    width: 100%;
+  }
+
+  .dn-weather-forecast {
+    grid-template-columns: repeat(7, minmax(72px, 1fr));
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: thin;
+  }
+
+  .dn-weather-day {
+    width: 72px;
+  }
+}
+
+/* ============================
+   VERY SMALL MOBILE
+   ============================ */
+
+@media (max-width: 380px) {
+  .dn-weather {
+    padding: 16px;
+  }
+
+  .dn-weather-details {
+    gap: 6px 9px;
+
+    font-size: 11px;
+  }
+
+  .dn-weather-forecast {
+    grid-template-columns: repeat(7, 68px);
+  }
+
+  .dn-weather-day {
+    width: 68px;
+  }
+}
+
+/* ============================
+   PLUS UI DARK MODE
+   ============================ */
+
+/* LIGHT MODE */
+.dn-weather {
+  background: #fff;
+  color: #333;
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+}
+
+.dn-weather-divider {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.dn-weather-update {
+  border-top-color: rgba(0, 0, 0, 0.07);
+}
+
+.dn-weather-day {
+  background: rgba(127, 127, 127, 0.06);
+}
+
+.dn-weather-day.today {
+  background: rgba(127, 127, 127, 0.12);
+}
+
+/* =========================================
+   DARK MODE
+   Plus UI v2.6.3 = body.drK
+   ========================================= */
+
+body.drK .dn-weather {
+  background: #202124 !important;
+  color: #f1f3f4 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.drK .dn-weather-divider {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.drK .dn-weather-update {
+  border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.drK .dn-weather-day {
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+body.drK .dn-weather-day.today {
+  background: rgba(255, 255, 255, 0.13) !important;
+}
+
+/* =========================================
+   POPUP
+   ========================================= */
+
+.dn-weather-popup-box {
+  background: #fff;
+  color: #333;
+}
+
+body.drK .dn-weather-popup-box {
+  background: #202124 !important;
+  color: #f1f3f4 !important;
+}
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.dn-weather-popup-close {
+  background: rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+body.drK .dn-weather-popup-close {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+body.drK .dn-weather-popup-close:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
